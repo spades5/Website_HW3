@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>產生數值列表</title>
+</head>
+
+<body>
+  <h2>數值列表表格</h2>
+  <table id="numberTable" border="1">
+    <thead>
+      <tr>
+        <th>x</th>
+        <th>x^2</th>
+        <th>x^3</th>
+        <th>x^4</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script>
+    const tableBody = document.querySelector("#numberTable tbody");
+
+    for(let x=1;x<=10;x++){
+      const row=document.createElement("tr");
+
+      const x2=x**2;
+      const x3=x**3;
+      const x4=x**4;
+
+      row.innerHTML = `
+        <td>${x}</td>
+        <td>${x2}</td>
+        <td>${x3}</td>
+        <td>${x4}</td>
+      `;
+
+      tableBody.appendChild(row);
+    }
+  </script>
+</body>
+</html>

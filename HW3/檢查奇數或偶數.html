@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>檢查奇數或偶數</title>
+</head>
+
+<body>
+  <button onclick="checkOddEven()">檢查奇數或偶數</button>
+
+  <script>
+    function checkOddEven(){
+      const input=prompt("輸入一個正整數：");
+      const number=parseInt(input,10);
+
+      if(isNaN(number) || number <= 0){
+        alert("這不是一個有效的正整數！");
+      } else {
+        if (number % 2 === 0) {
+          alert(number + " 是偶數。");
+        } else {
+          alert(number + " 是奇數。");
+        }
+      }
+    }
+  </script>
+</body>
+</html>
